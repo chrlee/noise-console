@@ -45,9 +45,10 @@
     padding-top: 1rem;
     flex-direction: column;
     justify-content: center;
+    overflow: none;
   }
 
-  .container > :global(*:not(canvas)) {
+  .container > :global(*:not(canvas, div)) {
     padding: 1rem;
   }
 

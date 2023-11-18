@@ -23,7 +23,7 @@
 
 <svelte:window on:resize={onResize} />
 
-<h1>1-Dimensional Noise Visualization</h1>
+<h1>2D Visualization of 1-Dimensional Noise</h1>
 <h2>Linear Interpolation</h2>
 <canvas bind:this={linearCanvas} />
 
