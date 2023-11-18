@@ -1,23 +1,44 @@
 <script lang="ts">
 	import { onMount } from "svelte";
-  import { animate, mountCanvas } from "$lib/vis/2d";
+  import { animateLinear, animateCubic, mountCanvas } from "$lib/vis/2d";
 
-  export let canvas: HTMLCanvasElement;
+  let linearCanvas: HTMLCanvasElement;
+  let cubicCanvas: HTMLCanvasElement;
   onMount(() => {
-    if(canvas && canvas.getContext("2d")){
-      mountCanvas(canvas);
-      animate(canvas.getContext("2d"));
+    if(linearCanvas && linearCanvas.getContext("2d")){
+      mountCanvas(linearCanvas);
+      animateLinear(linearCanvas.getContext("2d"));
+    }
+    if(cubicCanvas && cubicCanvas.getContext("2d")){
+      mountCanvas(cubicCanvas);
+      animateCubic(cubicCanvas.getContext("2d"));
     }
   });
 
   const onResize = () => {
-    console.log("resize");
-    if(canvas) mountCanvas(canvas);
+    if(linearCanvas) mountCanvas(linearCanvas);
+    if(cubicCanvas) mountCanvas(cubicCanvas);
   };
 </script>
 
 <svelte:window on:resize={onResize} />
 
-<canvas bind:this={canvas} />
+<h1>1-Dimensional Noise Visualization</h1>
+<h2>Linear Interpolation</h2>
+<canvas bind:this={linearCanvas} />
+
+<h2>Cubic Interpolation</h2>
+<canvas bind:this={cubicCanvas} />
 
 
+<style>
+  :global(canvas) {
+    width: 100%;
+    padding: 2rem 0;
+    display: block;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: -webkit-crisp-edges;
+    image-rendering: pixelated;
+    image-rendering: crisp-edges;
+  }
+</style>

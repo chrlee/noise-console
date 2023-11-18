@@ -13,7 +13,7 @@
 
 </script>
 
-<div>
+<div class="container">
   {#if currentPage !== '/'}
     <a on:click={() => goto(previousPage || $page.url.pathname.substring(0, $page.url.pathname.lastIndexOf('/')) || '/')}>back</a>
   {/if}
@@ -33,13 +33,27 @@
     margin: 0;
     padding: 0;
     background-color: #121212;
+    font-family: -apple-system, -apple-system,  
+                BlinkMacSystemFont, 'Segoe UI', Roboto,  
+                Oxygen, Ubuntu, Cantarell, 'Open Sans',  
+                'Helvetica Neue', sans-serif; 
   }
 
-  div{
+  .container {
     width: 100%;
     height: 100%;
     padding-top: 1rem;
     flex-direction: column;
     justify-content: center;
+  }
+
+  .container > :global(*:not(canvas)) {
+    padding: 1rem;
+  }
+
+  a {
+    color: #fff;
+    text-decoration: underline;
+    cursor: pointer;
   }
 </style>

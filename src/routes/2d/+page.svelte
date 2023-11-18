@@ -1,6 +1,6 @@
 <script>
   import { Canvas } from '@threlte/core'
-  import Scene from '$lib/Scene.svelte'
+  import Scene from './Scene.svelte'
 </script>
 
 <Canvas>

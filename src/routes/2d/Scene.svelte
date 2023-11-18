@@ -3,7 +3,6 @@
   import { Grid, MeshLineGeometry, MeshLineMaterial, OrbitControls } from '@threlte/extras';
   import { Color, Vector3 } from 'three';
 
-  let width = 0.1;
   let maxPoints = 1000;
   let dashOffset = 0;
   let color = new Color()
@@ -27,6 +26,7 @@
     const z = r * cosPhi* 5;
     return new Vector3(x, y, z);
   }
+
   useFrame((state, delta) => {
     // every frame we:
     // increase the dash offset
