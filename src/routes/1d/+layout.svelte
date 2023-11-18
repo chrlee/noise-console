@@ -19,7 +19,6 @@
 
 <h1>1-Dimensional Noise Visualization</h1>
 <slot canvas={canvas}/>
-<footer>Footer</footer>
 
 <style>
   :global(canvas) {
