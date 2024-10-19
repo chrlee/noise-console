@@ -42,17 +42,13 @@
   .container {
     width: 100%;
     height: 100%;
+    display: flex;
     padding-top: 1rem;
     flex-direction: column;
-    justify-content: center;
     overflow: none;
   }
 
-  .container > :global(*:not(canvas, div)) {
-    padding: 1rem;
-  }
-
-  a {
+  :global(a) {
     color: #fff;
     text-decoration: underline;
     cursor: pointer;
