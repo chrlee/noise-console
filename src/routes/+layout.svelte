@@ -43,9 +43,12 @@
     width: 100%;
     height: 100%;
     display: flex;
-    padding-top: 1rem;
     flex-direction: column;
     overflow: none;
+  }
+
+  .container > :global(h1), :global(h2), :global(p), :global(a) {
+    margin: 1rem;
   }
 
   :global(a) {
@@ -53,4 +56,5 @@
     text-decoration: underline;
     cursor: pointer;
   }
+
 </style>

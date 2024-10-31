@@ -1,17 +1,19 @@
-<script lang="ts">
-  const modules = import.meta.glob('/src/routes/**/+page.svelte');
-  const menuItems = Object.keys(modules).map((item) => item.match(/\/src\/routes\/(.*?)\/\+page\.svelte/)[1]);
-</script>
-
 <div>
   <h1>Noise Console</h1>
 
   <p>Mathematical noise visualizations in order of increasing input & output dimension</p>
 
+  <h2>2D Visualizations</h2>
   <ul>
-    {#each menuItems as item}
-      <li><a href="/{item}">{item}</a></li>
-    {/each}
+    <li><a href="/2d1d">1 Dimensional Noise</a></li>
+    <li><a href="/2d2d">2 Dimensional Noise</a></li>
+  </ul>
+
+  <h2>3D Visualizations</h2>
+  <ul>
+    <li><a href="/3d1d">2 Dimensional Noise</a></li>
+    <li><a href="/3d2d">2 Dimensional Noise with 2 Dimensional Output</a></li>
+    <li><a href="/3d3d">3 Dimensional Noise</a></li>
   </ul>
 </div>
 
@@ -21,6 +23,6 @@
   }
   
   h1 {
-    margin: 0;
+    margin: 1rem;
   }
 </style>
