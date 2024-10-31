@@ -1,9 +1,9 @@
 <script>
   import { Canvas } from '@threlte/core'
-  import Scene from '../3d3d/Scene.svelte'
+  import Scene from './Scene.svelte'
 </script>
 
-<h1>3D Visualization of 3-Dimensional Noise</h1>
+<h1>3D Visualization of 4D Noise</h1>
 <div>
   <Canvas>
     <Scene />

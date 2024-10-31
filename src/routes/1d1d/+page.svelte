@@ -23,7 +23,11 @@
 
 <svelte:window on:resize={onResize} />
 
-<h1>2D Visualization of 1-Dimensional Noise</h1>
+<h1>2D Visualization of 1D Noise</h1>
+
+<p>A mathematical noise function generates values from a single dimension (time) that are placed horizontally along a portion of the screen.<br />
+Different interpolation functions can be used to achieve varying aesthetic results as shown below.</p>
+
 <h2>Linear Interpolation</h2>
 <canvas bind:this={linearCanvas} />
 

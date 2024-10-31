@@ -47,7 +47,8 @@
     overflow: none;
   }
 
-  .container > :global(h1), :global(h2), :global(p), :global(a) {
+  .container > :global(h1), :global(h2), :global(h3),
+    :global(p), :global(a) {
     margin: 1rem;
   }
 

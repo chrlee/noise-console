@@ -17,7 +17,9 @@
 
 <svelte:window on:resize={onResize} />
 
-<h1>2D Visualization of 2-Dimensional Noise</h1>
+<h1>2D Visualization of 2D Noise</h1>
+<p>2 output dimensions (x, y) are derived from a single input dimension (time).</p>
+
 <canvas bind:this={linearCanvas} />
 
 

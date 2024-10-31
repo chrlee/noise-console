@@ -3,7 +3,7 @@
   import Scene from './Scene.svelte'
 </script>
 
-<h1>3D Visualization of 2-Dimensional Noise</h1>
+<h1>3D Visualization of 3D Noise</h1>
 <div>
   <Canvas>
     <Scene />
