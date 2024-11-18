@@ -2,6 +2,9 @@
   import { goto, afterNavigate } from '$app/navigation';
   import { page } from '$app/stores';
   import { base } from '$app/paths'
+  import { injectAnalytics } from '@vercel/analytics/sveltekit'
+
+  injectAnalytics();
 
   let currentPage : string = $page.url.pathname;
   let previousPage : string = base;
