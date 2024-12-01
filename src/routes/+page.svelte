@@ -10,6 +10,11 @@
     <li><a href="/1d2d">2D Output</a></li>
   </ul>
 
+  <h3>2-Dimensional Noise</h3>
+  <ul>
+    <li><a href="/flow">Flow Field</a></li>
+  </ul>
+
   <h2>3D Visualizations</h2>
   <h3>1-Dimensional Noise</h3>
   <ul>

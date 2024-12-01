@@ -18,7 +18,16 @@
 
 <div class="container">
   {#if currentPage !== '/'}
-    <a on:click={() => goto(previousPage || $page.url.pathname.substring(0, $page.url.pathname.lastIndexOf('/')) || '/')}>back</a>
+    <a 
+      on:click={
+        () => goto(
+          previousPage ||
+          $page.url.pathname.substring(0, $page.url.pathname.lastIndexOf('/')) ||
+          '/'
+        )
+      }
+      class="back-button"
+    >back</a>
   {/if}
   <slot />
 </div>
@@ -53,6 +62,10 @@
   .container > :global(h1), :global(h2), :global(h3),
     :global(p), :global(a) {
     margin: 1rem;
+  }
+
+  .container > .back-button {
+    z-index: 1;
   }
 
   :global(a) {
