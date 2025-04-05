@@ -131,7 +131,7 @@
         // Draw particle with fade effect
         ctx.beginPath();
         ctx.arc(particle.x, particle.y, 1.5, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(100, 100, 100, ${alpha})`;
+        ctx.fillStyle = `rgba(200, 200, 200, ${alpha})`;
         ctx.fill();
       }
   
