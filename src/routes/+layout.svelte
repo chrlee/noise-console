@@ -35,6 +35,21 @@
 <style>
   @import '../reset.css';
 
+  @font-face {
+    font-family: NebulaSansLight;
+    src: url('../fonts/NebulaSans-Light.woff2');
+  }
+
+  @font-face {
+    font-family: NebulaSansRegular;
+    src: url('../fonts/NebulaSans-Medium.woff2');
+  }
+
+  @font-face {
+    font-family: NebulaSansBold;
+    src: url('../fonts/NebulaSans-Semibold.woff2');
+  }
+
   :global(:root) {
     color-scheme: dark;
   }
@@ -45,7 +60,14 @@
     margin: 0;
     padding: 0;
     background-color: #121212;
-    font-family: -apple-system, -apple-system,  
+    font-family: NebulaSansLight, -apple-system, -apple-system,  
+                BlinkMacSystemFont, 'Segoe UI', Roboto,  
+                Oxygen, Ubuntu, Cantarell, 'Open Sans',  
+                'Helvetica Neue', sans-serif; 
+  }
+
+  :global(h1, h2, h3, h4, h5) {
+    font-family: NebulaSansRegular, -apple-system, -apple-system,  
                 BlinkMacSystemFont, 'Segoe UI', Roboto,  
                 Oxygen, Ubuntu, Cantarell, 'Open Sans',  
                 'Helvetica Neue', sans-serif; 
